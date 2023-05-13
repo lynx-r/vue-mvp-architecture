@@ -1,0 +1,1 @@
+export { useComponentStore } from './pinia'

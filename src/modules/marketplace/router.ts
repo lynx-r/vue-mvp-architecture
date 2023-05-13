@@ -1,10 +1,12 @@
-import { Router } from 'vue-router'
+import type { RouteRecordRaw, Router } from 'vue-router'
+import someShopRoute from './pages/some-shop/router'
 
-const Marketplaces = () => import('./pages/Index.vue')
+const Marketplaces = () => import('./pages/IndexPage.vue')
 
-const moduleRoute = {
+const moduleRoute: RouteRecordRaw = {
   path: '/marketplace',
-  component: Marketplaces
+  component: Marketplaces,
+  children: [someShopRoute]
 }
 
 export default (router: Router) => {

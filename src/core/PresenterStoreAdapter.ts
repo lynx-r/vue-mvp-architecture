@@ -1,14 +1,16 @@
-import { UpdatableState } from './UpdatableState'
+import { merge } from 'lodash'
+import type { UpdatableState } from './UpdatableState'
 
 export class PresenterStoreAdapter<T> {
   constructor(private store: UpdatableState<T>) {}
 
-  get state() {
+  protected get state() {
     return this.store.state
   }
 
-  updateState(newState: Partial<T> | T[keyof T]) {
-    this.store.updateState({ ...this.state, ...newState })
+  protected updateState(newState: Partial<T> | T[keyof T]) {
+    const mergedState = merge(this.state, newState)
+    this.store.updateState(mergedState)
   }
 
   resetState() {
