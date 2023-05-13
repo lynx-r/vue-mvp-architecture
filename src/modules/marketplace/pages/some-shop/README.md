@@ -1,3 +1,3 @@
-# The idea
+# A child page
 
-The clue idea of this folder is presenting it as a nested page with the same structure as the root page.
+The same structure as the root page
