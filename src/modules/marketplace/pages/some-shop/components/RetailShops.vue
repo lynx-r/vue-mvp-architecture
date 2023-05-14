@@ -17,7 +17,7 @@ import { usePresenter } from '../presenter/usePresenter'
 
 const presenter = usePresenter()
 
-const shopId = uniqueId('market ')
+const shopId = uniqueId('some-shop ')
 const shopName = uniqueId('name ')
 const date = new Date().getTime()
 </script>

@@ -14,7 +14,6 @@ export class PresenterStoreAdapter<T> {
   }
 
   resetState() {
-    // TODO fix typecast
-    this.store.updateState({} as T)
+    this.store.resetState()
   }
 }

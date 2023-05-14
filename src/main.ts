@@ -8,6 +8,7 @@ import router from './router'
 
 import { createPinia } from 'pinia'
 import { registerModules } from './register-modules'
+import vuexStore from './stores/vuex'
 
 registerModules({
   marketplace: marketplaceModule
@@ -18,5 +19,6 @@ const app = createApp(App)
 
 app.use(router)
 app.use(pinia)
+app.use(vuexStore)
 
 app.mount('#app')
